@@ -1,6 +1,8 @@
 -- What are the first and last names of the players who 
 -- played for the 2020 Chicago Cubs?
 
+select players.first_name,players.last_name from teams INNER JOIN stats ON stats.team_id=teams.id INNER JOIN players ON players.id=stats.player_id WHERE year=2020 AND name="Chicago Cubs"
+
 -- Hint: combine WHERE clauses using AND, e.g.
 -- WHERE column1 = expression1
 -- AND column2 = expression2
